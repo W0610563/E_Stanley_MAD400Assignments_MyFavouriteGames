@@ -17,9 +17,9 @@
 <app-content-card appHoverAffect affect="border" [firstOrLast]="isTheFirstElement || isLast"
                   [class.found]="titleSearch.value === item.title"
                   *ngFor="let item of (gameList | typeFilter: 'All Platforms'); first as isTheFirstElement; last as isLast" [content]="item"
-                  [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>
+                  [class.is-first]="isTheFirstElement" class="type"></app-content-card>
 
 <app-content-card appHoverAffect affect="border" [firstOrLast]="isTheFirstElement || isLast"
                   [class.found]="titleSearch.value === item.title"
                   *ngFor="let item of (gameList | typeFilter: 'PC'); first as isTheFirstElement; last as isLast" [content]="item"
-                  [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>
+                  [class.is-first]="isTheFirstElement" class="type"></app-content-card>
