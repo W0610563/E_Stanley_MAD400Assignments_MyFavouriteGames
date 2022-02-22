@@ -1,0 +1,50 @@
+:host{
+  background-color: rgba(220, 220, 220, 0.3);
+  border: 3px solid rgba(20, 20, 20, 0.1);
+  display: block;
+  width: 400px;
+  margin: 10px auto;
+  text-align: center;
+  font-family: "Arial Thin";
+  .description {
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+  }
+  img{
+    margin: 10px;
+    width: 80%;
+    height: 450px;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.1) 10px 10px;
+  }
+  .creator,.type,.tags{
+    margin: 8px 16px 8px 0;
+  }
+  .author-info{
+    height: 24px;
+  }
+  .creator {
+    font-weight: bold;
+  }
+  .creator:hover {
+    text-decoration: underline;
+  }
+  .creator::before {
+    content: "Created by: ";
+    font-weight: normal;
+  }
+  .type{
+    font-style: italic;
+  }
+  .tags{
+    color: #fff;
+    margin: 16px 0;
+  }
+  .tag{
+    padding: 8px;
+    background-color: #747bdb;
+    border-radius:8px;
+    margin: 0 5px 0 0;
+  }
+}
