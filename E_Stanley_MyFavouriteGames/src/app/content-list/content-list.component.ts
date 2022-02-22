@@ -8,6 +8,7 @@ import { Content } from "../helper-files/content-interface";
 })
 export class ContentListComponent implements OnInit {
   gameList: Content[];
+  titleFound?: boolean;
 
   constructor() {
     this.gameList = [{
@@ -64,11 +65,24 @@ export class ContentListComponent implements OnInit {
       description: 'Survival open world game to explore islands and the ocean.',
       creator: 'Redbeet Interactive',
       imgURL: 'https://static-cdn.jtvnw.net/ttv-boxart/494925_IGDB-272x380.jpg',
-      type: 'PC'
+      type: ''
     }]
   }
 
   ngOnInit(): void {
+  }
+
+  checkForTitle(title: string): void {
+    if (this.gameList.some(e => e.title === title)) {
+      this.titleFound = true;
+    } else {
+      this.titleFound = false;
+    }
+    if (this.gameList.filter(e => e.title === title).length) {
+      this.titleFound = true;
+    } else {
+      this.titleFound = false;
+    }
   }
 
 }

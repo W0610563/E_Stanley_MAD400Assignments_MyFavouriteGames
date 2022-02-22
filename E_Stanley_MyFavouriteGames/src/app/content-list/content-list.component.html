@@ -1,1 +1,19 @@
-<app-content-card *ngFor="let item of gameList; first as isTheFirstElement" [content]="item" [class.is-first]="isTheFirstElement"></app-content-card>
+<div class="mainDiv">
+  <div>
+    <input #titleSearch placeholder="Title here..."><br>
+    <button (click)="checkForTitle(titleSearch.value)">Title Check</button>
+    <div>
+      <span class="success" *ngIf="titleFound"> {{ titleSearch.value}} found!</span>
+      <span class="failure" *ngIf="titleFound === false"> {{ titleSearch.value}} not found!</span>
+    </div>
+  </div>
+</div>
+
+  <app-content-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (gameList | typeFilter); first as isTheFirstElement"
+                    [content]="item" [class.is-first]="isTheFirstElement" class="no-type"></app-content-card>
+
+  <app-content-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (gameList | typeFilter: 'PC'); first as isTheFirstElement"
+                    [content]="item" [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>
+
+  <app-content-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (gameList | typeFilter: 'All Platforms'); first as isTheFirstElement"
+                    [content]="item" [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>

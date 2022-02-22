@@ -1,0 +1,43 @@
+.success{
+  color: gold;
+  font-weight: bold;
+}
+.failure{
+  color: crimson;
+}
+.success, .failure {
+  font-size: 18px;
+  font-family: Arial;
+  text-align: center;
+}
+input {
+  width: 200px;
+  padding: 4px;
+  font-size: 16px;
+  border: 0px;
+  border-bottom: 1px solid black;
+}
+input::placeholder {
+  font-size: 16px;
+}
+input:focus {
+  outline: none;
+}
+button {
+  padding: 7px 5px 7px 5px;
+  font-size: 18px;
+  font-family: Arial sans-serif;
+  border: 0px;
+  letter-spacing: 1px;
+  width: 150px;
+  background-color: lightblue;
+}
+button:hover {
+  transform: scale(1.1, 1.1);
+}
+input, button {
+  margin: 10px;
+}
+.mainDiv {
+  position: absolute;
+}
