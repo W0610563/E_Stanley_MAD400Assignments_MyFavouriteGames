@@ -1,0 +1,8 @@
+<input #idInput type="number" placeholder="ID"><br/>
+<input #titleInput placeholder="Title"><br/>
+<input #descriptionInput placeholder="Description"><br/>
+<input #creatorInput placeholder="Creator"><br/>
+<input #imageInput placeholder="Image"><br/>
+<input #typeInput placeholder="Type"><br/>
+<input #tagsInput placeholder="Tags"><br/>
+<button type="reset" (click)="addContent(idInput.value, titleInput.value, descriptionInput.value, creatorInput.value, imageInput.value, typeInput.value, tagsInput.value);">Submit</button>
